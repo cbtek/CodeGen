@@ -1,0 +1,3 @@
+[submodule "common/utility"]
+	path = common/utility
+	url = git://github.com/cbtek/utility.git

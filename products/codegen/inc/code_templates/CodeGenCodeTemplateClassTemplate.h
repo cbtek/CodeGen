@@ -1,5 +1,5 @@
 /*
-    ProjectTemplateClassTemplate.h
+    CodeGenCodeTemplateClassTemplate.h
     
 
 */
@@ -11,37 +11,32 @@ namespace products {
 namespace codegen {
 namespace code_templates {
 
-class ProjectTemplateClassTemplate :public CodeTemplate
+class CodeGenCodeTemplateClassTemplate :public CodeTemplate
 {
 public:
    /*
-    * @brief ProjectTemplateClassTemplate
+    * @brief CodeGenCodeTemplateClassTemplate
     *
 	*/
-	ProjectTemplateClassTemplate();
+	CodeGenCodeTemplateClassTemplate();
     
     /**
-     * @brief createCode
-     * @param name
-     * @param rootFolderIncPath
-     * @param rootFolderSrcPath
+     * @see CodeTemplate::createCode
      */
     virtual void createCode(const std::string& name,
                             const std::string& rootFolderIncPath,
                             const std::string& rootFolderSrcPath);
 
-
     /**
-     * @brief getType
-     * @return
+     * @see CodeTemplate::getType
      */
     virtual CodeTemplateType getType() const;
 
-	/*
-	 * @brief ProjectTemplateClassTemplate (Descructor)
+    /**
+	 * @brief CodeGenCodeTemplateClassTemplate (Descructor)
      *
 	 */
-	~ProjectTemplateClassTemplate();	
+	~CodeGenCodeTemplateClassTemplate();	
 
 private:
     

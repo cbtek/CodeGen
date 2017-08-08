@@ -21,7 +21,7 @@ RStatsModuleUIClassTemplate::RStatsModuleUIClassTemplate()
 
 void RStatsModuleUIClassTemplate::createCode(const std::string &name, const std::string &rootFolderIncPath, const std::string &rootFolderSrcPath)
 {
-
+    THROW_GENERIC_EXCEPTION("Not Implemented");
 }
 
 CodeTemplateType RStatsModuleUIClassTemplate::getType() const

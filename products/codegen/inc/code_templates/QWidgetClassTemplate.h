@@ -21,19 +21,14 @@ public:
 	QWidgetClassTemplate();
     
     /**
-     * @brief createCode
-     * @param name
-     * @param rootFolderIncPath
-     * @param rootFolderSrcPath
+     * @see CodeTemplate::createCode
      */
     virtual void createCode(const std::string& name,
                             const std::string& rootFolderIncPath,
                             const std::string& rootFolderSrcPath);
 
-
     /**
-     * @brief getType
-     * @return
+     * @see CodeTemplate::getType
      */
     virtual CodeTemplateType getType() const;
     

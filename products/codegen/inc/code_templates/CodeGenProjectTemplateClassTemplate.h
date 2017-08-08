@@ -1,5 +1,5 @@
 /*
-    StaticClassTemplate.h
+    CodeGenProjectTemplateClassTemplate.h
     
 
 */
@@ -8,40 +8,35 @@
 
 namespace cbtek {
 namespace products {
-namespace pgen2 {
+namespace codegen {
 namespace code_templates {
 
-class StaticClassTemplate :public CodeTemplate
+class CodeGenProjectTemplateClassTemplate :public CodeTemplate
 {
 public:
    /*
-    * @brief StaticClassTemplate
+    * @brief CodeGenProjectTemplateClassTemplate
     *
 	*/
-	StaticClassTemplate();
+	CodeGenProjectTemplateClassTemplate();
     
     /**
-     * @brief createCode
-     * @param name
-     * @param rootFolderIncPath
-     * @param rootFolderSrcPath
+     * @see CodeTemplate::createCode
      */
     virtual void createCode(const std::string& name,
                             const std::string& rootFolderIncPath,
                             const std::string& rootFolderSrcPath);
 
-
     /**
-     * @brief getType
-     * @return
+     * @see CodeTemplate::getType
      */
     virtual CodeTemplateType getType() const;
 
-	/**
-	 * @brief StaticClassTemplate (Descructor)
+	/*
+	 * @brief CodeGenProjectTemplateClassTemplate (Descructor)
      *
 	 */
-	~StaticClassTemplate();	
+	~CodeGenProjectTemplateClassTemplate();	
 
 private:
     

@@ -21,7 +21,7 @@ StaticClassTemplate::StaticClassTemplate()
 
 void StaticClassTemplate::createCode(const std::string &name, const std::string &rootFolderIncPath, const std::string &rootFolderSrcPath)
 {
-
+    THROW_GENERIC_EXCEPTION("Not Implemented");
 }
 
 CodeTemplateType StaticClassTemplate::getType() const

@@ -11,6 +11,9 @@ namespace products {
 namespace codegen {
 namespace code_templates {
 
+/**
+ * @brief Template for generating a basic C++ class
+ */
 class BasicClassTemplate :public CodeTemplate
 {
 public:
@@ -22,18 +25,14 @@ public:
 	BasicClassTemplate();
     
     /**
-     * @brief createCode
-     * @param name
-     * @param rootFolderIncPath
-     * @param rootFolderSrcPath
+     * @see CodeTemplate::createCode
      */
     virtual void createCode(const std::string& name,
                             const std::string& rootFolderIncPath,
                             const std::string& rootFolderSrcPath);
 
     /**
-     * @brief getType
-     * @return
+     * @see CodeTemplate::getType
      */
     virtual CodeTemplateType getType() const;
     
@@ -44,7 +43,13 @@ public:
 	~BasicClassTemplate();	
 
 private:
-    
+    std::vector<std::string> m_namespaceList;
+    std::vector<std::string> m_localIncludeList;
+    std::vector<std::string> m_libraryIncludeList;
+    std::vector<std::string> m_methodNameList;
+    std::vector<std::string> m_methodReturnTypeList;
+    std::vector<std::string> m_methodParamsList;
+
 };
 }}}}//end namespace
 

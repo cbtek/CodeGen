@@ -8,6 +8,8 @@
 //----------------------------------------
 #include "BasicClassTemplate.h"
 
+#include "CodeGenUtils.h"
+
 namespace cbtek {
 namespace products {
 namespace codegen {
@@ -19,9 +21,17 @@ BasicClassTemplate::BasicClassTemplate()
 
 }
 
-void BasicClassTemplate::createCode(const std::string &name, const std::string &rootFolderIncPath, const std::string &rootFolderSrcPath)
+void BasicClassTemplate::createCode(const std::string &name,
+                                    const std::string &rootFolderIncPath,
+                                    const std::string &rootFolderSrcPath)
 {
+    std::ostringstream incOut,srcOut;
+    incOut << CodeGenUtils::getDoxygenClassHeader(name);
+    incOut << "class " << name << std::endl;
+    incOut << "{" << std::endl;
+    incOut << "}" << std::endl;
 
+    THROW_GENERIC_EXCEPTION("Not Implemented");
 }
 
 CodeTemplateType BasicClassTemplate::getType() const
